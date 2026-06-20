@@ -159,12 +159,14 @@ class InputScanner {
 // Please do not change the following code.
 export {}; // <- An empty export is required so that ts-check can determine it as a module.
 
-async function readInput(): Promise<string> {
+import { readFileSync } from "node:fs";
+
+function readInput(): string {
     try {
-        return await Bun.file("/dev/stdin").text();
+        return readFileSync("/dev/stdin", "utf8");
     } catch {
-        return await Bun.stdin.text();
+        return readFileSync(0, "utf8");
     }
 }
 
-Main(await readInput());
+Main(readInput());
