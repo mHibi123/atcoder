@@ -109,7 +109,7 @@ class BinarySearch {
         let high = array.length - 1;
         while (low <= high) {
             const mid = Math.floor((low + high) / 2);
-            const cmp = compareFn(array[mid], target);
+            const cmp = compareFn(array[mid]!, target);
             if (cmp === 0) return true;
             if (cmp < 0) low = mid + 1;
             else high = mid - 1;
@@ -144,7 +144,7 @@ class BinarySearch {
         let high = array.length;
         while (low < high) {
             const mid = Math.floor((low + high) / 2);
-            const cmp = compareFn(array[mid], target);
+            const cmp = compareFn(array[mid]!, target);
             if (cmp < 0) low = mid + 1;
             else high = mid;
         }
@@ -179,7 +179,7 @@ class BinarySearch {
         let high = array.length;
         while (low < high) {
             const mid = Math.floor((low + high) / 2);
-            const cmp = compareFn(array[mid], target);
+            const cmp = compareFn(array[mid]!, target);
             if (cmp <= 0) low = mid + 1;
             else high = mid;
         }

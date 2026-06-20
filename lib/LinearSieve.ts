@@ -32,7 +32,7 @@ class LinearSieve {
                 primes.push(i);
             }
             for (const p of primes) {
-                if (p > mpf[i] || p * i > N) break;
+                if (p > mpf[i]! || p * i > N) break;
                 mpf[p * i] = p;
             }
         }
@@ -87,8 +87,8 @@ class LinearSieve {
         let now = N;
         const factors: number[] = [];
         while (now > 1) {
-            factors.push(MPF[now]);
-            now /= MPF[now];
+            factors.push(MPF[now]!);
+            now /= MPF[now]!;
         }
         return factors;
     }

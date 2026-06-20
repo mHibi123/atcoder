@@ -60,7 +60,7 @@ class DisjointSet {
             return x;
         }
         // 親を再帰的に探索し、その過程で親を根に直接つなぎ変える（経路圧縮）
-        const root = this.find(this.#parents[x]);
+        const root = this.find(this.#parents[x]!);
         this.#parents[x] = root;
         return root;
     }
@@ -91,12 +91,12 @@ class DisjointSet {
             return false;
         } else {
             // サイズが小さい木を大きい木にくっつける
-            if (this.#size[rootX] < this.#size[rootY]) {
+            if (this.#size[rootX]! < this.#size[rootY]!) {
                 this.#parents[rootX] = rootY;
-                this.#size[rootY] += this.#size[rootX];
+                this.#size[rootY]! += this.#size[rootX]!;
             } else {
                 this.#parents[rootY] = rootX;
-                this.#size[rootX] += this.#size[rootY];
+                this.#size[rootX]! += this.#size[rootY]!;
             }
             // 連結成分の数を1減らす
             this.#components--;
@@ -145,7 +145,7 @@ class DisjointSet {
      */
     getGroupSize(x: number): number {
         const root = this.find(x);
-        return this.#size[root];
+        return this.#size[root]!;
     }
 
     /**

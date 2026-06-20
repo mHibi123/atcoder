@@ -7,7 +7,7 @@
 
 function Main(inputText: string): void {
     const scanner = new InputScanner(inputText);
-    // Add your code here  
+    // Add your code here
 }
 
 /**
@@ -153,7 +153,7 @@ class InputScanner {
     }
 }
 
-// ライブラリが必要なとき: atcoderLibrary.ts から必要な部分をコピペ
+// ライブラリが必要なとき必要な部分をコピペ
 
 
 // Please do not change the following code.

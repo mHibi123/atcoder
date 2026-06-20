@@ -100,8 +100,8 @@ class BinaryHeapLite<T> {
                 ) < 0
             ) {
                 // indexMapを先に更新
-                const currentElement = this.#elements[currentIndex];
-                const childElement = this.#elements[compareTargetChildIndex];
+                const currentElement = this.#elements[currentIndex]!;
+                const childElement = this.#elements[compareTargetChildIndex]!;
                 // 交換
                 [this.#elements[currentIndex], this.#elements[compareTargetChildIndex]] = [
                     childElement,
@@ -133,8 +133,8 @@ class BinaryHeapLite<T> {
                 ) < 0
             ) {
                 // indexMapを先に更新
-                const currentElement = this.#elements[currentIndex];
-                const parentElement = this.#elements[parentIndex];
+                const currentElement = this.#elements[currentIndex]!;
+                const parentElement = this.#elements[parentIndex]!;
                 // 交換
                 [this.#elements[currentIndex], this.#elements[parentIndex]] = [
                     parentElement,
