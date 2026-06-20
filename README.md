@@ -1,6 +1,6 @@
 # AtCoder (TypeScript / Bun)
 
-AtCoder 向けの TypeScript 解答リポジトリです。提出時は **1 ファイルに lib をコピペ** する方式で管理します。
+AtCoder 向けの TypeScript 解答リポジトリです。コンテスト回答・練習用
 
 ## ディレクトリ構成
 
@@ -45,9 +45,9 @@ cd c:\Users\manami\std\atcoder
 
 ### 手動
 
-1. [`template.ts`](template.ts) を `contests/{contest_id}/{problem}.ts` にコピー
+1. `[template.ts](template.ts)` を `contests/{contest_id}/{problem}.ts` にコピー
 2. ヘッダの `${CONTEST_ID}` 等を置換
-3. 必要な [`lib/*.ts`](lib/) を `InputScanner` 直後にコピペ（[lib/docs/README.md](lib/docs/README.md) 参照）
+3. 必要な `[lib/*.ts](lib/)` を `InputScanner` 直後にコピペ（[lib/docs/README.md](lib/docs/README.md) 参照）
 
 ## ローカル実行
 
@@ -69,5 +69,3 @@ Get-Content contests/abc400/tests/a.in | bun run contests/abc400/a.ts
 | ------- | -------------------------------------------------------------------- |
 | 1 問 AC | `contests/.../{problem}.ts` + `tests/{problem}.in` を 1 コミット     |
 | 未完成  | WIP コミット、または `contests/**/scratch/` に置く（gitignore 済み） |
-
-コミットメッセージ例: `abc400 a: 二分探索で AC`
