@@ -2,7 +2,7 @@
 // Source: jsr:@ayaexptech/arcane@1.0.0-alpha.7
 //
 // 使い方:
-//   1. atcoderTemplate.ts から問題ファイルを作成
+//   1. template.ts から問題ファイルを作成
 //   2. 必要な .ts をこのフォルダからコピー
 //   3. InputScanner の直後（export {} より前）に貼る
 //

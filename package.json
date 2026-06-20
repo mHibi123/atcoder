@@ -1,6 +1,10 @@
 {
   "name": "atcoder",
   "private": true,
+  "scripts": {
+    "run": "bun run",
+    "new": "powershell -File scripts/new-problem.ps1"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

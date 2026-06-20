@@ -1,13 +1,14 @@
-// ================================================================
-// ${CONTEST_ID} - ${TASK_LABEL}: ${TASK_TITLE}
-// (URL: ${TASK_URL})
+﻿// ================================================================
+// abc463 - A: 16:9
+// (URL: https://atcoder.jp/contests/abc463/tasks/abc463_a)
 // TypeScript (Bun) Submission [using InputScanner]
-// Get-Content input.txt | bun run atcoderTemplate.ts
+// Get-Content contests/abc463/tests/a.in | bun run contests/abc463/a.ts
 // ================================================================
 
 function Main(inputText: string): void {
     const scanner = new InputScanner(inputText);
-    // Add your code here  
+    // Add your code here
+    
 }
 
 /**

@@ -6,7 +6,7 @@ Source: [jsr:@ayaexptech/arcane@1.0.0-alpha.7](https://jsr.io/@ayaexptech/arcane
 
 ## 使い方
 
-1. [atcoderTemplate.ts](../../atcoderTemplate.ts) から問題用ファイルを作成する
+1. [`template.ts`](../../template.ts) から問題用ファイルを作成する（または [`scripts/new-problem.ps1`](../../scripts/new-problem.ps1) を使う）
 2. 必要な `.ts` を [lib/](../) からコピーする
 3. `InputScanner` クラスの直後、`export {}` より前に貼り付ける
 
@@ -65,5 +65,5 @@ flowchart TD
 
 ```powershell
 cd c:\Users\manami\std\atcoder
-Get-Content input.txt | bun run atcoderTemplate.ts
+Get-Content contests/abc400/tests/a.in | bun run contests/abc400/a.ts
 ```
