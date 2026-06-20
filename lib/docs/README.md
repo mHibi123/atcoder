@@ -22,18 +22,18 @@ export {};
 
 ## ライブラリ一覧
 
-| ファイル | 説明 | ドキュメント |
-|---------|------|-------------|
-| `helpers.ts` | 定数・配列ユーティリティ・出力 | [helpers.md](./helpers.md) |
-| `ExtendedMath.ts` | GCD、約数、整数平方根、素数判定など | [ExtendedMath.md](./ExtendedMath.md) |
-| `ModOps.ts` | 剰余演算（加減乗除・逆元・累乗） | [ModOps.md](./ModOps.md) |
-| `Combination.ts` | 二項係数 nCk mod p | [Combination.md](./Combination.md) |
-| `DisjointSet.ts` | Union-Find（素集合データ構造） | [DisjointSet.md](./DisjointSet.md) |
-| `Deque.ts` | 双方向キュー | [Deque.md](./Deque.md) |
-| `LinearSieve.ts` | 線形篩・素因数分解 | [LinearSieve.md](./LinearSieve.md) |
-| `BinarySearch.ts` | 二分探索・lower/upper bound | [BinarySearch.md](./BinarySearch.md) |
-| `BinaryHeapLite.ts` | 二分ヒープ（優先度付きキュー） | [BinaryHeapLite.md](./BinaryHeapLite.md) |
-| `tier2.ts` | 追加候補のメモ（未同梱） | [tier2.md](./tier2.md) |
+| ファイル            | 説明                                | ドキュメント                             |
+| ------------------- | ----------------------------------- | ---------------------------------------- |
+| `helpers.ts`        | 定数・配列ユーティリティ・出力      | [helpers.md](./helpers.md)               |
+| `ExtendedMath.ts`   | GCD、約数、整数平方根、素数判定など | [ExtendedMath.md](./ExtendedMath.md)     |
+| `ModOps.ts`         | 剰余演算（加減乗除・逆元・累乗）    | [ModOps.md](./ModOps.md)                 |
+| `Combination.ts`    | 二項係数 nCk mod p                  | [Combination.md](./Combination.md)       |
+| `DisjointSet.ts`    | Union-Find（素集合データ構造）      | [DisjointSet.md](./DisjointSet.md)       |
+| `Deque.ts`          | 双方向キュー                        | [Deque.md](./Deque.md)                   |
+| `LinearSieve.ts`    | 線形篩・素因数分解                  | [LinearSieve.md](./LinearSieve.md)       |
+| `BinarySearch.ts`   | 二分探索・lower/upper bound         | [BinarySearch.md](./BinarySearch.md)     |
+| `BinaryHeapLite.ts` | 二分ヒープ（優先度付きキュー）      | [BinaryHeapLite.md](./BinaryHeapLite.md) |
+| `tier2.ts`          | 追加候補のメモ（未同梱）            | [tier2.md](./tier2.md)                   |
 
 ## 依存関係
 
@@ -55,11 +55,11 @@ flowchart TD
 
 ### 貼り付け順
 
-| 使うライブラリ | 貼る順序 |
-|--------------|---------|
-| `Combination` | `ExtendedMath.ts` → `ModOps.ts` → `Combination.ts` |
-| `ModOps` | `ExtendedMath.ts` → `ModOps.ts` |
-| それ以外 | 単体で OK |
+| 使うライブラリ | 貼る順序                                           |
+| -------------- | -------------------------------------------------- |
+| `Combination`  | `ExtendedMath.ts` → `ModOps.ts` → `Combination.ts` |
+| `ModOps`       | `ExtendedMath.ts` → `ModOps.ts`                    |
+| それ以外       | 単体で OK                                          |
 
 ## ローカルテスト
 

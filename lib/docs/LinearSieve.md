@@ -23,10 +23,10 @@
 
 ## API 一覧
 
-| メソッド | 引数 | 戻り値 | 計算量 |
-|---------|------|--------|--------|
-| `getAllMPF(N)` | `number` | 長さ N+1 の MPF 配列 | O(N) |
-| `getAllPrimes(N)` | `number` | N 以下の素数の昇順配列 | O(N) |
+| メソッド            | 引数               | 戻り値                       | 計算量   |
+| ------------------- | ------------------ | ---------------------------- | -------- |
+| `getAllMPF(N)`      | `number`           | 長さ N+1 の MPF 配列         | O(N)     |
+| `getAllPrimes(N)`   | `number`           | N 以下の素数の昇順配列       | O(N)     |
 | `factorize(N, MPF)` | `number`, MPF 配列 | N の素因数（昇順・重複あり） | O(log N) |
 
 ### MPF 配列について
@@ -43,9 +43,9 @@ const mpf = LinearSieve.getAllMPF(N);
 const primes = LinearSieve.getAllPrimes(N);
 // primes: [2, 3, 5, 7, 11, ...]
 
-LinearSieve.factorize(12, mpf);  // [2, 2, 3]
-LinearSieve.factorize(1, mpf);   // []
-LinearSieve.factorize(3, mpf);   // [3]
+LinearSieve.factorize(12, mpf); // [2, 2, 3]
+LinearSieve.factorize(1, mpf); // []
+LinearSieve.factorize(3, mpf); // [3]
 
 // 複数クエリの素因数分解
 function solve(x: number): void {

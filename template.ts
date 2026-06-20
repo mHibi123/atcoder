@@ -155,7 +155,6 @@ class InputScanner {
 
 // ライブラリが必要なとき必要な部分をコピペ
 
-
 // Please do not change the following code.
 export {}; // <- An empty export is required so that ts-check can determine it as a module.
 

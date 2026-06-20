@@ -8,13 +8,13 @@
 
 ## 追加候補一覧
 
-| 名前 | 用途 |
-|------|------|
-| `GraphAdjacencyList` | グラフ構築、BFS、DFS |
-| `SegmentTree` | 区間和・区間 min/max クエリ |
-| `LazySegmentTree` | 区間更新 + 区間クエリ |
-| `UniqueID` | 座標圧縮 |
-| `MaxFlow` | 最大流 |
+| 名前                 | 用途                        |
+| -------------------- | --------------------------- |
+| `GraphAdjacencyList` | グラフ構築、BFS、DFS        |
+| `SegmentTree`        | 区間和・区間 min/max クエリ |
+| `LazySegmentTree`    | 区間更新 + 区間クエリ       |
+| `UniqueID`           | 座標圧縮                    |
+| `MaxFlow`            | 最大流                      |
 
 ## 追加手順
 

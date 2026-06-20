@@ -35,13 +35,13 @@ new BinaryHeapLite<T>(compareFn: (a: T, b: T) => number, initialValues?: T[])
 
 ### メソッド・プロパティ
 
-| 名前 | 説明 | 計算量 |
-|------|------|--------|
-| `push(value)` | 要素を追加 | O(log N) |
-| `pop()` | 最優先要素を削除して返す。空なら undefined | O(log N) |
-| `peek()` | 最優先要素を参照（削除しない） | O(1) |
-| `clear()` | ヒープを空にする | O(1) |
-| `size` | 要素数（getter） | O(1) |
+| 名前          | 説明                                       | 計算量   |
+| ------------- | ------------------------------------------ | -------- |
+| `push(value)` | 要素を追加                                 | O(log N) |
+| `pop()`       | 最優先要素を削除して返す。空なら undefined | O(log N) |
+| `peek()`      | 最優先要素を参照（削除しない）             | O(1)     |
+| `clear()`     | ヒープを空にする                           | O(1)     |
+| `size`        | 要素数（getter）                           | O(1)     |
 
 ## 使用例
 
@@ -51,13 +51,13 @@ const minHeap = new BinaryHeapLite<number>((a, b) => a - b);
 minHeap.push(5);
 minHeap.push(3);
 minHeap.push(8);
-minHeap.peek();  // 3
-minHeap.pop();   // 3
-minHeap.pop();   // 5
+minHeap.peek(); // 3
+minHeap.pop(); // 3
+minHeap.pop(); // 5
 
 // 初期値から構築
 const heap = new BinaryHeapLite<number>((a, b) => a - b, [5, 3, 8, 1]);
-heap.pop();  // 1
+heap.pop(); // 1
 
 // 最大ヒープ
 const maxHeap = new BinaryHeapLite<number>((a, b) => b - a);

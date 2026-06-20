@@ -34,29 +34,29 @@ new ModOps(mod: bigint)
 
 ### メソッド
 
-| メソッド | 説明 | 計算量 |
-|---------|------|--------|
-| `normalize(value)` | value mod mod（非負に正規化） | O(1) |
-| `add(a, b)` | (a + b) mod mod | O(1) |
-| `sum(...values)` | 総和 mod mod | O(引数の数) |
-| `sub(a, b)` | (a - b) mod mod | O(1) |
-| `mul(a, b)` | (a × b) mod mod | O(1) |
-| `prod(...values)` | 総積 mod mod | O(引数の数) |
-| `pow(a, b)` | a^b mod mod（b ≥ 0） | O(log b) |
-| `inv(a)` | a の mod 逆元 | O(log mod) |
-| `div(a, b)` | a × inv(b) mod mod | O(log mod) |
+| メソッド           | 説明                          | 計算量      |
+| ------------------ | ----------------------------- | ----------- |
+| `normalize(value)` | value mod mod（非負に正規化） | O(1)        |
+| `add(a, b)`        | (a + b) mod mod               | O(1)        |
+| `sum(...values)`   | 総和 mod mod                  | O(引数の数) |
+| `sub(a, b)`        | (a - b) mod mod               | O(1)        |
+| `mul(a, b)`        | (a × b) mod mod               | O(1)        |
+| `prod(...values)`  | 総積 mod mod                  | O(引数の数) |
+| `pow(a, b)`        | a^b mod mod（b ≥ 0）          | O(log b)    |
+| `inv(a)`           | a の mod 逆元                 | O(log mod)  |
+| `div(a, b)`        | a × inv(b) mod mod            | O(log mod)  |
 
 ## 使用例
 
 ```typescript
 const mod = new ModOps(7n);
 
-mod.add(5n, 8n);    // 6n  (13 mod 7)
-mod.sub(7n, 8n);    // 6n
-mod.mul(7n, 8n);    // 6n
-mod.pow(3n, 4n);    // 4n  (81 mod 7)
-mod.inv(3n);        // 5n  (3×5 ≡ 1 mod 7)
-mod.div(3n, 2n);    // 5n  (3 × inv(2) mod 7)
+mod.add(5n, 8n); // 6n  (13 mod 7)
+mod.sub(7n, 8n); // 6n
+mod.mul(7n, 8n); // 6n
+mod.pow(3n, 4n); // 4n  (81 mod 7)
+mod.inv(3n); // 5n  (3×5 ≡ 1 mod 7)
+mod.div(3n, 2n); // 5n  (3 × inv(2) mod 7)
 
 mod.normalize(-3n); // 4n
 ```

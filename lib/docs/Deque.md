@@ -33,19 +33,19 @@ new Deque<T>(initialValues?: Iterable<T>)
 
 ### メソッド・プロパティ
 
-| 名前 | 説明 | 計算量 |
-|------|------|--------|
-| `unshift(value)` | 先頭に追加 | 償却 O(1) |
-| `push(value)` | 末尾に追加 | 償却 O(1) |
-| `shift()` | 先頭を削除して返す。空なら undefined | 償却 O(1) |
-| `pop()` | 末尾を削除して返す。空なら undefined | 償却 O(1) |
-| `first()` | 先頭を参照（削除しない） | 償却 O(1) |
-| `last()` | 末尾を参照（削除しない） | 償却 O(1) |
-| `get(i)` | 先頭から i 番目（0-indexed） | O(1) |
-| `set(i, value)` | i 番目を置換 | O(1) |
-| `isEmpty()` | 空かどうか | O(1) |
-| `toArray()` | 配列として取得 | O(N) |
-| `size` | 要素数（getter） | O(1) |
+| 名前             | 説明                                 | 計算量    |
+| ---------------- | ------------------------------------ | --------- |
+| `unshift(value)` | 先頭に追加                           | 償却 O(1) |
+| `push(value)`    | 末尾に追加                           | 償却 O(1) |
+| `shift()`        | 先頭を削除して返す。空なら undefined | 償却 O(1) |
+| `pop()`          | 末尾を削除して返す。空なら undefined | 償却 O(1) |
+| `first()`        | 先頭を参照（削除しない）             | 償却 O(1) |
+| `last()`         | 末尾を参照（削除しない）             | 償却 O(1) |
+| `get(i)`         | 先頭から i 番目（0-indexed）         | O(1)      |
+| `set(i, value)`  | i 番目を置換                         | O(1)      |
+| `isEmpty()`      | 空かどうか                           | O(1)      |
+| `toArray()`      | 配列として取得                       | O(N)      |
+| `size`           | 要素数（getter）                     | O(1)      |
 
 ## 使用例
 
@@ -56,11 +56,11 @@ dq.unshift(0);
 dq.push(4);
 // [0, 1, 2, 3, 4]
 
-dq.shift();  // 0
-dq.pop();    // 4
-dq.first();  // 1
-dq.last();   // 3
-dq.get(1);   // 2
+dq.shift(); // 0
+dq.pop(); // 4
+dq.first(); // 1
+dq.last(); // 3
+dq.get(1); // 2
 
 // BFS の典型パターン
 const queue = new Deque<[number, number]>();

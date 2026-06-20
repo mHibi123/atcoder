@@ -34,13 +34,13 @@ new DisjointSet(size: number)
 
 ### メソッド・プロパティ
 
-| 名前 | 説明 | 計算量 |
-|------|------|--------|
-| `find(x)` | x の属する集合の代表元（根） | 償却 O(α(N)) |
-| `union(x, y)` | x と y の集合を結合。成功で true | 償却 O(α(N)) |
-| `connected(x, y)` | 同じ集合に属するか | 償却 O(α(N)) |
-| `getGroupSize(x)` | x の属する集合のサイズ | 償却 O(α(N)) |
-| `componentCount` | 現在の連結成分数（getter） | O(1) |
+| 名前              | 説明                             | 計算量       |
+| ----------------- | -------------------------------- | ------------ |
+| `find(x)`         | x の属する集合の代表元（根）     | 償却 O(α(N)) |
+| `union(x, y)`     | x と y の集合を結合。成功で true | 償却 O(α(N)) |
+| `connected(x, y)` | 同じ集合に属するか               | 償却 O(α(N)) |
+| `getGroupSize(x)` | x の属する集合のサイズ           | 償却 O(α(N)) |
+| `componentCount`  | 現在の連結成分数（getter）       | O(1)         |
 
 ## 使用例
 
@@ -48,11 +48,11 @@ new DisjointSet(size: number)
 const ds = new DisjointSet(5);
 // 初期: 5 成分、各要素は独立
 
-ds.union(0, 1);           // true
-ds.connected(0, 1);       // true
-ds.union(0, 1);           // false（既に同じ集合）
-ds.getGroupSize(0);       // 2
-ds.componentCount;        // 4
+ds.union(0, 1); // true
+ds.connected(0, 1); // true
+ds.union(0, 1); // false（既に同じ集合）
+ds.getGroupSize(0); // 2
+ds.componentCount; // 4
 
 const root0 = ds.find(0);
 const root1 = ds.find(1);

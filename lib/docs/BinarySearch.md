@@ -25,20 +25,20 @@
 
 ### 比較関数定数
 
-| 定数 | 用途 |
-|------|------|
-| `COMPARE_NUMBER_ASCENDING` | 数値昇順 |
-| `COMPARE_NUMBER_DESCENDING` | 数値降順 |
-| `COMPARE_SORT_DEFAULT` | 文字列辞書順（Array#sort デフォルト相当） |
-| `COMPARE_SORT_REVERSE` | 文字列逆順 |
+| 定数                        | 用途                                      |
+| --------------------------- | ----------------------------------------- |
+| `COMPARE_NUMBER_ASCENDING`  | 数値昇順                                  |
+| `COMPARE_NUMBER_DESCENDING` | 数値降順                                  |
+| `COMPARE_SORT_DEFAULT`      | 文字列辞書順（Array#sort デフォルト相当） |
+| `COMPARE_SORT_REVERSE`      | 文字列逆順                                |
 
 ### 探索メソッド
 
-| メソッド | 説明 | 戻り値 | 計算量 |
-|---------|------|--------|--------|
-| `binary_search(array, target, compareFn)` | target と等しい要素があるか | `boolean` | O(log N) |
-| `lower_bound(array, target, compareFn)` | target 以上の最初のインデックス | `number`（なければ length） | O(log N) |
-| `upper_bound(array, target, compareFn)` | target より大きい最初のインデックス | `number`（なければ length） | O(log N) |
+| メソッド                                  | 説明                                | 戻り値                      | 計算量   |
+| ----------------------------------------- | ----------------------------------- | --------------------------- | -------- |
+| `binary_search(array, target, compareFn)` | target と等しい要素があるか         | `boolean`                   | O(log N) |
+| `lower_bound(array, target, compareFn)`   | target 以上の最初のインデックス     | `number`（なければ length） | O(log N) |
+| `upper_bound(array, target, compareFn)`   | target より大きい最初のインデックス | `number`（なければ length） | O(log N) |
 
 ## 使用例
 
@@ -46,11 +46,11 @@
 const arr = [1, 3, 5, 7, 9];
 const cmp = BinarySearch.COMPARE_NUMBER_ASCENDING;
 
-BinarySearch.binary_search(arr, 5, cmp);  // true
-BinarySearch.binary_search(arr, 4, cmp);  // false
+BinarySearch.binary_search(arr, 5, cmp); // true
+BinarySearch.binary_search(arr, 4, cmp); // false
 
-BinarySearch.lower_bound(arr, 4, cmp);    // 2  (arr[2]=5 が最初の ≥4)
-BinarySearch.upper_bound(arr, 5, cmp);    // 3  (arr[3]=7 が最初の >5)
+BinarySearch.lower_bound(arr, 4, cmp); // 2  (arr[2]=5 が最初の ≥4)
+BinarySearch.upper_bound(arr, 5, cmp); // 3  (arr[3]=7 が最初の >5)
 
 // ソート
 const a = [5, 2, 9, 1];
@@ -58,8 +58,7 @@ a.sort(BinarySearch.COMPARE_NUMBER_ASCENDING);
 // [1, 2, 5, 9]
 
 // 個数: [lower_bound, upper_bound) の幅
-const count = BinarySearch.upper_bound(arr, 5, cmp)
-            - BinarySearch.lower_bound(arr, 5, cmp);
+const count = BinarySearch.upper_bound(arr, 5, cmp) - BinarySearch.lower_bound(arr, 5, cmp);
 // 5 の個数 = 1
 ```
 

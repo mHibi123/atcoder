@@ -37,9 +37,9 @@ new Combination(p: bigint, max: bigint)
 
 ### メソッド
 
-| メソッド | 引数 | 戻り値 | 計算量 |
-|---------|------|--------|--------|
-| `get(n, k)` | `number, number` | nCk mod p | O(1) |
+| メソッド    | 引数             | 戻り値    | 計算量 |
+| ----------- | ---------------- | --------- | ------ |
+| `get(n, k)` | `number, number` | nCk mod p | O(1)   |
 
 - n < k または n < 0 または k < 0 → `0n`
 
@@ -48,8 +48,8 @@ new Combination(p: bigint, max: bigint)
 ```typescript
 const comb = new Combination(7n, 10n);
 
-comb.get(10, 5);  // 0n  (252 mod 7 = 0)
-comb.get(5, 2);   // 3n  (10 mod 7 = 3)
+comb.get(10, 5); // 0n  (252 mod 7 = 0)
+comb.get(5, 2); // 3n  (10 mod 7 = 3)
 
 // 998244353 mod の典型例
 const C = new Combination(998244353n, 200000n);

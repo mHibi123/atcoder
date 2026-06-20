@@ -21,12 +21,12 @@ atcoder/
 
 ## 命名規則
 
-| 対象 | 規則 | 例 |
-|------|------|-----|
+| 対象         | 規則                 | 例                              |
+| ------------ | -------------------- | ------------------------------- |
 | 大会フォルダ | contest ID（小文字） | `abc400`, `arc200`, `typical90` |
-| 問題ファイル | 問題記号（小文字） | `a.ts`, `f.ts`, `001.ts` |
-| テスト入力 | `{問題}.in` | `tests/a.in` |
-| 期待出力 | `{問題}.out`（任意） | `tests/a.out` |
+| 問題ファイル | 問題記号（小文字）   | `a.ts`, `f.ts`, `001.ts`        |
+| テスト入力   | `{問題}.in`          | `tests/a.in`                    |
+| 期待出力     | `{問題}.out`（任意） | `tests/a.out`                   |
 
 ## 新規問題の作り方
 
@@ -65,9 +65,9 @@ Get-Content contests/abc400/tests/a.in | bun run contests/abc400/a.ts
 
 ## Git 管理
 
-| 場面 | 推奨 |
-|------|------|
-| 1 問 AC | `contests/.../{problem}.ts` + `tests/{problem}.in` を 1 コミット |
-| 未完成 | WIP コミット、または `contests/**/scratch/` に置く（gitignore 済み） |
+| 場面    | 推奨                                                                 |
+| ------- | -------------------------------------------------------------------- |
+| 1 問 AC | `contests/.../{problem}.ts` + `tests/{problem}.in` を 1 コミット     |
+| 未完成  | WIP コミット、または `contests/**/scratch/` に置く（gitignore 済み） |
 
 コミットメッセージ例: `abc400 a: 二分探索で AC`
