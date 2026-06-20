@@ -65,7 +65,6 @@ Get-Content contests/abc400/tests/a.in | bun run contests/abc400/a.ts
 
 ## Git 管理
 
-| 場面    | 推奨                                                                 |
-| ------- | -------------------------------------------------------------------- |
-| 1 問 AC | `contests/.../{problem}.ts` + `tests/{problem}.in` を 1 コミット     |
-| 未完成  | WIP コミット、または `contests/**/scratch/` に置く（gitignore 済み） |
+| 場面   | 推奨                                                                 |
+| ------ | -------------------------------------------------------------------- |
+| 未完成 | WIP コミット、または `contests/**/scratch/` に置く（gitignore 済み） |
