@@ -1,20 +1,51 @@
 ﻿// ================================================================
-// abc463 - A: 16:9
-// (URL: https://atcoder.jp/contests/abc463/tasks/abc463_a)
+// abc463 - D: Maximize the Gap
+// (URL: https://atcoder.jp/contests/abc463/tasks/abc463_d)
 // TypeScript (Bun) Submission [using InputScanner]
-// Get-Content contests/abc463/tests/a.in | bun run contests/abc463/a.ts
+// Get-Content contests/abc463/tests/d.in | bun run contests/abc463/d.ts
 // ================================================================
 
 function Main(inputText: string): void {
     const scanner = new InputScanner(inputText);
     // Add your code here
-    const [X, Y] = scanner.int(2);
-    const n = X! / 16;
-    if (Y! / n === 9) {
-        console.log("Yes");
-    } else {
-        console.log("No");
+
+    const [N, K] = scanner.int(2)!;
+    type LR = { L: number; R: number };
+    const LRList: LR[] = [];
+    for (let i = 0; i < N!; i++) {
+        const [L, R] = scanner.int(2)!;
+        LRList.push({ L: L!, R: R! });
     }
+    LRList.sort((a, b) => a.R - b.R);
+
+    /** 最小距離 G 以上を保てる非重複区間を K 個選べるか（終了 R 昇順の貪欲） */
+    const can = (G: number): boolean => {
+        const needL = G === 0 ? 1 : G; // 端点接触も重なり → G=0 でも L > lastR
+        let count = 0;
+        let lastR = -Infinity;
+        for (const { L, R } of LRList) {
+            if (L >= lastR + needL) {
+                count++;
+                lastR = R;
+                if (count >= K!) return true;
+            }
+        }
+        return false;
+    };
+
+    if (!can(0)) {
+        console.log(-1);
+        return;
+    }
+
+    let lo = 0;
+    let hi = 1_000_000_001;
+    while (lo < hi) {
+        const mid = Math.floor((lo + hi + 1) / 2);
+        if (can(mid)) lo = mid;
+        else hi = mid - 1;
+    }
+    console.log(lo);
 }
 
 /**
@@ -160,7 +191,7 @@ class InputScanner {
     }
 }
 
-// ライブラリが必要なとき: atcoderLibrary.ts から必要な部分をコピペ
+// ライブラリが必要なとき必要な部分をコピペ
 
 // Please do not change the following code.
 export {}; // <- An empty export is required so that ts-check can determine it as a module.

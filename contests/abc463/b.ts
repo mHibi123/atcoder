@@ -1,20 +1,19 @@
 ﻿// ================================================================
-// abc463 - A: 16:9
-// (URL: https://atcoder.jp/contests/abc463/tasks/abc463_a)
+// abc463 - B: Train Reservation
+// (URL: https://atcoder.jp/contests/abc463/tasks/abc463_b)
 // TypeScript (Bun) Submission [using InputScanner]
-// Get-Content contests/abc463/tests/a.in | bun run contests/abc463/a.ts
+// Get-Content contests/abc463/tests/b.in | bun run contests/abc463/b.ts
 // ================================================================
 
 function Main(inputText: string): void {
     const scanner = new InputScanner(inputText);
     // Add your code here
-    const [X, Y] = scanner.int(2);
-    const n = X! / 16;
-    if (Y! / n === 9) {
-        console.log("Yes");
-    } else {
-        console.log("No");
-    }
+    const N = scanner.int()!;
+    const X = scanner.str()!;
+    const S = scanner.str(N)!;
+    const x = X.charCodeAt(0) - "A".charCodeAt(0);
+
+    console.log(S.some((s) => s[x] === "o") ? "Yes" : "No");
 }
 
 /**
