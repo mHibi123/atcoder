@@ -1,0 +1,1 @@
+Get-Content study/practice/implementation/prefix-sum/problems/002/tests/sample.in | bun run study/practice/implementation/prefix-sum/solutions/002.ts
