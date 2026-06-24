@@ -33,7 +33,6 @@ atcoder/
 ### スクリプト（推奨）
 
 ```powershell
-cd c:\Users\manami\std\atcoder
 .\scripts\new-problem.ps1 -Contest abc400 -Problem a -TaskTitle "問題タイトル"
 ```
 
