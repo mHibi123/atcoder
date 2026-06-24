@@ -9,4 +9,10 @@ const matrix = <T>(h: number, w: number, init: T): T[][] =>
     Array.from({ length: h }, () => Array(w).fill(init));
 
 const println = (...args: unknown[]) => console.log(...args);
-const print = (...args: unknown[]) => process.stdout.write(args.join(" "));
+// const print = (...args: unknown[]) => process.stdout.write(args.join(" "));
+let first = true;
+const print = (...args: unknown[]) => {
+    if (!first) process.stdout.write(" ");
+    first = false;
+    process.stdout.write(String(args.join(" ")));
+};
